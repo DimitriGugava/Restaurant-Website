@@ -1,0 +1,190 @@
+.mainpage {
+  height: 5734px;
+  width: 100%;
+  margin: auto;
+}
+.mainPageHeaderBox {
+  height: 748px;
+  width: auto;
+  background: black;
+  margin: auto;
+  mix-blend-mode: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pizzaPhoto {
+  margin: 0px auto;
+  width: 100%;
+}
+
+.mainPageHeaderConcentBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 364px;
+  width: 327px;
+  left: 24px;
+  top: 232px;
+  border-radius: 0px;
+}
+
+.mainPageHeaderText {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  height: 32px;
+  width: 82.4000015258789px;
+  color: #ffffff;
+  font-family: "League Spartan";
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.4000000059604645px;
+}
+.mainPageSecondText {
+  height: 80px;
+  width: 327px;
+
+  font-family: "League Spartan";
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: -0.4000000059604645px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.mainPageNormalText {
+  height: 78px;
+  width: 327px;
+  margin: 21px auto;
+  font-family: "League Spartan";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+}
+.bookTableButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 64px;
+  width: 245px;
+  margin: 0px auto;
+  border: 1px solid #ffffff;
+  background-color: black;
+  font-family: "League Spartan";
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 2.5px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.mainPageSecondPartContentBox {
+  height: 662px;
+  width: 327px;
+  margin: -70px auto !important;
+}
+.villageImage {
+  height: 400px;
+  width: 327px;
+  background-image: url(../icons/villageImage.svg);
+  background-repeat: no-repeat;
+  background-position: -25px 0px;
+}
+
+.secondPartLine {
+  height: 1px;
+  width: 56px;
+  background: #9e7f66;
+  margin: 0px auto;
+}
+
+.seoncPartContentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 214px;
+  width: 327px;
+  margin: 36px auto;
+}
+.seoncPAartHeaderText {
+  height: 80px;
+  width: 327px;
+  font-family: "League Spartan";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.4000000059604645px;
+  text-align: center;
+  color: #242b37;
+}
+.secondPartSecondaryText {
+  height: 78px;
+  width: 327px;
+  font-family: "League Spartan";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #242b37;
+}
+
+.mainPageThirdPartContentBox {
+  height: 662px;
+  width: 327px;
+  margin: 151px auto !important;
+}
+.dinningImage {
+  height: 400px;
+  width: 327px;
+  background-image: url(../icons/dinningImage.svg);
+  background-repeat: no-repeat;
+  background-position: -25px 0px;
+}
+
+.thirdPartContentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 214px;
+  width: 327px;
+  margin: 36px auto;
+}
+.thirdPartLine {
+  height: 1px;
+  width: 56px;
+  background: #9e7f66;
+  margin: 0px auto;
+}
+.thirdPAartHeaderText {
+  height: 80px;
+  width: 327px;
+
+  font-family: "League Spartan";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.4000000059604645px;
+  text-align: center;
+  color: #242b37;
+}
+.thirdPartSecondaryText {
+  height: 78px;
+  width: 327px;
+  font-family: "League Spartan";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #242b37;
+}
