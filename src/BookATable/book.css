@@ -1,0 +1,298 @@
+.bookMainCont {
+  height: 1150px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reservationContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  width: 375px;
+  background-image: url(../icons/reservationback.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.reservationContentBox {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 50px auto;
+}
+
+.reservationHeaderText {
+  height: 40px;
+  width: 103.4246597290039px;
+  font-family: "League Spartan";
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 2.5px;
+  text-align: left;
+  color: #ffffff;
+}
+.reservationHeaderSecondText {
+  height: 40px;
+  width: 327px;
+  font-family: "League Spartan";
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: -0.4000000059604645px;
+  text-align: center;
+
+  color: #ffffff;
+}
+.reservationNormalText {
+  height: 40px;
+  width: auto;
+  font-family: "League Spartan";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.reservationCalculatorBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 625px;
+  width: 327px;
+  margin: -150px auto;
+  background: #ffffff;
+  box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.503223);
+}
+
+.inputName {
+  height: 43px;
+  width: 263px;
+  margin: 20px auto;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #111111;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #8e8e8e;
+}
+
+.inputEmail {
+  height: 43px;
+  width: 263px;
+  margin: 0px auto;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #111111;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #8e8e8e;
+}
+.pickADateCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 79px;
+  width: 263px;
+  left: 56px;
+  top: 651px;
+  border-radius: 0px;
+  margin: 34px auto;
+}
+.pickADateText {
+  height: 28px;
+  width: 92px;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #111111;
+}
+.pickaDateBox {
+  height: 43px;
+  width: 263px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px auto;
+  gap: 15px;
+}
+.month {
+  height: 43px;
+  width: 73px;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #111111;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #8e8e8e;
+}
+.day {
+  height: 43px;
+  width: 73px;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #111111;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #8e8e8e;
+}
+.year {
+  height: 43px;
+  width: 88px;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #111111;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #8e8e8e;
+}
+.amPm {
+  height: 43px;
+  width: 73px;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #111111;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #8e8e8e;
+}
+.arrow {
+  margin: 0px -40px;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.peopleBox {
+  height: 41px;
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 36px 32px !important;
+  gap: 70px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #8e8e8e;
+}
+
+.minus {
+  height: 24px;
+  width: 5px;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: #9e7f66;
+}
+.minus:hover {
+  cursor: pointer;
+}
+.minus:active {
+  font-size: 21px;
+}
+.peopleNumber {
+  height: 24px;
+  width: 72px;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+}
+.peopleText {
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+}
+.plus {
+  height: 24px;
+  width: 5px;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: #9e7f66;
+}
+.plus:hover {
+  cursor: pointer;
+}
+.plus:active {
+  font-size: 21px;
+}
+.makeReservation {
+  height: 64px;
+  width: 263px;
+  background: #111111;
+  font-family: "League Spartan";
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  color: #ffffff;
+}
+.makeReservation:hover {
+  cursor: pointer;
+}
+.makeReservation:active {
+  font-size: 16.8px;
+}
