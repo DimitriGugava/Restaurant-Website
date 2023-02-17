@@ -10,6 +10,14 @@ const Book = () => {
   const [amToPm, setAmToPm] = useState(false);
   const [peopleNumber, setPeopleNumber] = useState(0);
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [month, setMonth] = useState("");
+  const [day, setDay] = useState("");
+  const [year, setYear] = useState("");
+  const [hour, setHour] = useState("");
+  const [minute, setMinute] = useState("");
+  const [am, setAm] = useState("");
+  const [pm, setPm] = useState("");
 
   const SelectAmPm = () => {
     return setAmPm(!amPm);
@@ -37,45 +45,75 @@ const Book = () => {
 
   const nameInput = (e) => {
     setName(e.target.value);
+    console.log(name);
   };
 
-  useEffect(() => {
-    setTimeout(() => {}, 1);
-    return () => {
-      clearTimeout(nameInput);
-    };
-  }, [nameInput]);
-
   const emailInput = (e) => {
-    const email = e.target.value;
+    setEmail(e.target.value);
     console.log(email);
   };
 
-  const makeReservation = (e) => {
-    e.preventDefault();
-    const name = e.target.elements.name.value;
-    const email = e.target.elements.email.value;
-    const month = e.target.elements.month.value;
-    const day = e.target.elements.day.value;
-    const year = e.target.elements.year.value;
-    const time = `${e.target.elements.time_hour.value}:${
-      e.target.elements.time_minute.value
-    }${amToPm ? "pm" : "am"}`;
-    const people = peopleNumber;
-
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Date:", `${month}/${day}/${year}`);
-    console.log("Time:", time);
-    console.log("Number of people:", people);
-
-    setAmPm(false);
-    setAmToPm(false);
-    setPeopleNumber(0);
+  const monthInput = (e) => {
+    setMonth(e.target.value);
+    console.log(month);
+  };
+  const dayInput = (e) => {
+    setDay(e.target.value);
+    console.log(day);
+  };
+  const yearInput = (e) => {
+    setYear(e.target.value);
+    console.log(year);
+  };
+  const hourInput = (e) => {
+    setHour(e.target.value);
+    console.log(hour);
+  };
+  const minuteInput = (e) => {
+    setMinute(e.target.value);
+    console.log(minute);
+  };
+  const amInput = (e) => {
+    setAm(e.target.value);
+    console.log(am);
+  };
+  const pmInput = (e) => {
+    setPm(e.target.value);
+    console.log(pm);
   };
 
+  useEffect(() => {
+    setTimeout(() => {}, 1000);
+    return () => {
+      clearTimeout(nameInput, emailInput);
+    };
+  }, [nameInput, emailInput]);
+
+  //   const makeReservation = (e) => {
+  //     e.preventDefault();
+  //     const name = e.target.elements.name.value;
+  //     const email = e.target.elements.email.value;
+  //     const month = e.target.elements.month.value;
+  //     const day = e.target.elements.day.value;
+  //     const year = e.target.elements.year.value;
+  //     const time = `${e.target.elements.time_hour.value}:${
+  //       e.target.elements.time_minute.value
+  //     }${amToPm ? "pm" : "am"}`;
+  //     const people = peopleNumber;
+
+  //     console.log("Name:", name);
+  //     console.log("Email:", email);
+  //     console.log("Date:", `${month}/${day}/${year}`);
+  //     console.log("Time:", time);
+  //     console.log("Number of people:", people);
+
+  //     setAmPm(false);
+  //     setAmToPm(false);
+  //     setPeopleNumber(0);
+  //   };
+
   return (
-    <form onSubmit={makeReservation}>
+    <form>
       <div className="bookMainCont">
         <div className="reservationContent">
           <div className="reservationContentBox">
@@ -118,9 +156,20 @@ const Book = () => {
                 type="number"
                 className="month"
                 placeholder="MM"
+                onChange={monthInput}
               />
-              <input type="number" className="day" placeholder="DD" />
-              <input type="number" className="year" placeholder="YYYY" />
+              <input
+                type="number"
+                className="day"
+                placeholder="DD"
+                onChange={dayInput}
+              />
+              <input
+                type="number"
+                className="year"
+                placeholder="YYYY"
+                onChange={yearInput}
+              />
             </div>
           </div>
           <div className="pickADateCont">
@@ -132,6 +181,7 @@ const Book = () => {
                 className="month"
                 placeholder="HH"
                 max={12}
+                onChange={hourInput}
               />
               <input
                 name="time_minute"
@@ -139,11 +189,22 @@ const Book = () => {
                 className="day"
                 placeholder="Minute"
                 max={59}
+                onChange={minuteInput}
               />
               {!amToPm ? (
-                <input type="text" className="amPm" placeholder="AM" />
+                <input
+                  type="text"
+                  className="amPm"
+                  placeholder="AM"
+                  onChange={amInput}
+                />
               ) : (
-                <input type="text" className="amPm" placeholder="PM" />
+                <input
+                  type="text"
+                  className="amPm"
+                  placeholder="PM"
+                  onChange={pmInput}
+                />
               )}
               {!amPm ? (
                 <img className="arrow" src={arrow} onClick={SelectAmPm} />
