@@ -3,11 +3,13 @@ import Bottom from "../Bottom/Bottom";
 import arrow from "../icons/arrow.svg";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 const Book = () => {
   const [amPm, setAmPm] = useState(false);
   const [amToPm, setAmToPm] = useState(false);
   const [peopleNumber, setPeopleNumber] = useState(0);
+  const [name, setName] = useState("");
 
   const SelectAmPm = () => {
     return setAmPm(!amPm);
@@ -15,13 +17,13 @@ const Book = () => {
 
   const ChangeToAm = () => {
     if (amPm) {
-      setAmPm(true);
+      setAmPm(false);
       setAmToPm(false);
     }
   };
   const ChangeToPm = () => {
     if (amPm) {
-      setAmPm(true);
+      setAmPm(false);
       setAmToPm(true);
     }
   };
@@ -32,8 +34,48 @@ const Book = () => {
   const subtractPeople = () => {
     return setPeopleNumber(peopleNumber - 1);
   };
+
+  const nameInput = (e) => {
+    setName(e.target.value);
+  };
+
+  useEffect(() => {
+    setTimeout(() => {}, 1);
+    return () => {
+      clearTimeout(nameInput);
+    };
+  }, [nameInput]);
+
+  const emailInput = (e) => {
+    const email = e.target.value;
+    console.log(email);
+  };
+
+  const makeReservation = (e) => {
+    e.preventDefault();
+    const name = e.target.elements.name.value;
+    const email = e.target.elements.email.value;
+    const month = e.target.elements.month.value;
+    const day = e.target.elements.day.value;
+    const year = e.target.elements.year.value;
+    const time = `${e.target.elements.time_hour.value}:${
+      e.target.elements.time_minute.value
+    }${amToPm ? "pm" : "am"}`;
+    const people = peopleNumber;
+
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Date:", `${month}/${day}/${year}`);
+    console.log("Time:", time);
+    console.log("Number of people:", people);
+
+    setAmPm(false);
+    setAmToPm(false);
+    setPeopleNumber(0);
+  };
+
   return (
-    <>
+    <form onSubmit={makeReservation}>
       <div className="bookMainCont">
         <div className="reservationContent">
           <div className="reservationContentBox">
@@ -51,15 +93,32 @@ const Book = () => {
         </div>
         <div className="reservationCalculatorBox">
           <div className="reserInputBox">
-            <input placeholder="Name" className="inputName" type="text" />
+            <input
+              placeholder="Name"
+              name="name"
+              className="inputName"
+              type="text"
+              onChange={nameInput}
+            />
           </div>
           <div className="reserInputBoxEmail">
-            <input placeholder="Email" className="inputEmail" type="email" />
+            <input
+              placeholder="Email"
+              className="inputEmail"
+              type="email"
+              name="email"
+              onChange={emailInput}
+            />
           </div>
           <div className="pickADateCont">
             <h1 className="pickADateText">Pick a date</h1>
             <div className="pickaDateBox">
-              <input type="number" className="month" placeholder="MM" />
+              <input
+                name="date"
+                type="number"
+                className="month"
+                placeholder="MM"
+              />
               <input type="number" className="day" placeholder="DD" />
               <input type="number" className="year" placeholder="YYYY" />
             </div>
@@ -67,8 +126,20 @@ const Book = () => {
           <div className="pickADateCont">
             <h1 className="pickADateText">Pick a time</h1>
             <div className="pickaDateBox">
-              <input type="number" className="month" placeholder="MM" />
-              <input type="number" className="day" placeholder="DD" />
+              <input
+                name="time_hour"
+                type="number"
+                className="month"
+                placeholder="HH"
+                max={12}
+              />
+              <input
+                name="time_minute"
+                type="number"
+                className="day"
+                placeholder="Minute"
+                max={59}
+              />
               {!amToPm ? (
                 <input type="text" className="amPm" placeholder="AM" />
               ) : (
@@ -106,7 +177,7 @@ const Book = () => {
         </div>
       </div>
       <Bottom />
-    </>
+    </form>
   );
 };
 export default Book;
