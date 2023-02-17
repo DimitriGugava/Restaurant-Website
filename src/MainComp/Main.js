@@ -7,6 +7,8 @@ import rosemary from "../icons/rosemary.svg";
 import summerfruit from "../icons/summerfruit.svg";
 import gathering from "../icons/gathering.svg";
 import Bottom from "../Bottom/Bottom";
+import { Link } from "react-router-dom";
+
 const Main = () => {
   return (
     <>
@@ -20,7 +22,9 @@ const Main = () => {
               Experience our seasonal menu in beautiful country surroundings.
               Eat the freshest produce from the comfort of our farmhouse.
             </a>
-            <button className="bookTableButton">Book a table</button>
+            <Link to="/reservation" className="bookTableButton">
+              Book a table
+            </Link>
           </div>
         </div>
 
@@ -117,14 +121,18 @@ const Main = () => {
               memorable experience for all.
             </a>
           </div>
-          <button className="bookaTableFirstBox">BOOK A TABLE</button>
+          <Link to="/reservation" className="bookaTableFirstBox">
+            BOOK A TABLE
+          </Link>
         </div>
         <div className="fifthPartReadyForReserCont">
           <div className="readyToMakeReserContentBox">
             <a className="readyToMakeReservationText">
               Ready to make a reservation?
             </a>
-            <button className="bookTableSecondBox">BOOK A TABLE</button>
+            <Link to="/reservation" className="bookTableSecondBox">
+              BOOK A TABLE
+            </Link>
           </div>
         </div>
       </div>
