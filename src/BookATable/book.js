@@ -19,17 +19,17 @@ const Book = () => {
   const [am, setAm] = useState("");
   const [pm, setPm] = useState("");
 
-  const SelectAmPm = () => {
+  const SelectAmPm = (e) => {
     return setAmPm(!amPm);
   };
 
-  const ChangeToAm = () => {
+  const ChangeToAm = (e) => {
     if (amPm) {
       setAmPm(false);
       setAmToPm(false);
     }
   };
-  const ChangeToPm = () => {
+  const ChangeToPm = (e) => {
     if (amPm) {
       setAmPm(false);
       setAmToPm(true);
@@ -45,42 +45,70 @@ const Book = () => {
 
   const nameInput = (e) => {
     setName(e.target.value);
-    console.log(name);
   };
 
   const emailInput = (e) => {
     setEmail(e.target.value);
-    console.log(email);
   };
 
   const monthInput = (e) => {
     setMonth(e.target.value);
-    console.log(month);
   };
   const dayInput = (e) => {
     setDay(e.target.value);
-    console.log(day);
   };
   const yearInput = (e) => {
     setYear(e.target.value);
-    console.log(year);
   };
   const hourInput = (e) => {
     setHour(e.target.value);
-    console.log(hour);
   };
   const minuteInput = (e) => {
     setMinute(e.target.value);
-    console.log(minute);
   };
   const amInput = (e) => {
     setAm(e.target.value);
-    console.log(am);
   };
   const pmInput = (e) => {
     setPm(e.target.value);
-    console.log(pm);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // if (!name || !email || !month || !day || !year || !hour || !minute) {
+    //   alert("Please fill in all the required fields.");
+    //   return;
+    // }
+
+    let formData = {
+      name,
+      email,
+      month,
+      day,
+      year,
+      hour,
+      minute,
+      am: "",
+      pm: "",
+      peopleNumber,
+    };
+
+    if (!amPm) {
+      formData.am = amToPm ? "PM" : "AM";
+      formData.pm = "";
+    } else {
+      formData.am = "";
+      formData.pm = "";
+    }
+
+    console.log(formData);
+    alert(JSON.stringify(formData, null, 2));
+  };
+
+  useEffect(() => {
+    console.log(name, email, month, day, year, hour, minute, am, pm);
+  }, [name, email, month, day, year, hour, minute, am, pm]);
 
   useEffect(() => {
     setTimeout(() => {}, 1000);
@@ -89,31 +117,8 @@ const Book = () => {
     };
   }, [nameInput, emailInput]);
 
-  //   const makeReservation = (e) => {
-  //     e.preventDefault();
-  //     const name = e.target.elements.name.value;
-  //     const email = e.target.elements.email.value;
-  //     const month = e.target.elements.month.value;
-  //     const day = e.target.elements.day.value;
-  //     const year = e.target.elements.year.value;
-  //     const time = `${e.target.elements.time_hour.value}:${
-  //       e.target.elements.time_minute.value
-  //     }${amToPm ? "pm" : "am"}`;
-  //     const people = peopleNumber;
-
-  //     console.log("Name:", name);
-  //     console.log("Email:", email);
-  //     console.log("Date:", `${month}/${day}/${year}`);
-  //     console.log("Time:", time);
-  //     console.log("Number of people:", people);
-
-  //     setAmPm(false);
-  //     setAmToPm(false);
-  //     setPeopleNumber(0);
-  //   };
-
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="bookMainCont">
         <div className="reservationContent">
           <div className="reservationContentBox">
@@ -156,6 +161,8 @@ const Book = () => {
                 type="number"
                 className="month"
                 placeholder="MM"
+                max={12}
+                min={1}
                 onChange={monthInput}
               />
               <input
@@ -163,11 +170,14 @@ const Book = () => {
                 className="day"
                 placeholder="DD"
                 onChange={dayInput}
+                max={31}
+                min={1}
               />
               <input
                 type="number"
                 className="year"
                 placeholder="YYYY"
+                min={2023}
                 onChange={yearInput}
               />
             </div>
@@ -197,6 +207,7 @@ const Book = () => {
                   className="amPm"
                   placeholder="AM"
                   onChange={amInput}
+                  value={am}
                 />
               ) : (
                 <input
@@ -204,6 +215,7 @@ const Book = () => {
                   className="amPm"
                   placeholder="PM"
                   onChange={pmInput}
+                  value={pm}
                 />
               )}
               {!amPm ? (
