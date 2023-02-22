@@ -195,12 +195,13 @@
   margin: 0px auto;
   background: #111111;
 }
-.thirdPartContentBox {
+.thirdPartContentBox2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 1546px;
   width: 327px;
+  margin: 0px auto;
 }
 .thirdPartContentHeader {
   display: flex;
@@ -449,4 +450,275 @@
 }
 .bookTableSecondBox:active {
   font-size: 16.5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .villagephototablet {
+    display: none;
+  }
+  .dinningImageTablet {
+    display: none;
+  }
+  .gatheringImagetablet {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mainPageHeaderBox {
+    height: 992px;
+    width: 768px;
+  }
+  .mainPageHeaderConcentBox {
+    height: 402px;
+    width: 689px;
+    display: flex;
+    align-items: center;
+  }
+  .mainPageHeaderText {
+    font-size: 50px;
+    margin: 0px auto;
+  }
+  .mainPageSecondText {
+    height: auto;
+    width: 689px;
+    margin: 0px auto;
+    font-family: "League Spartan";
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: -0.6000000238418579px;
+    text-align: center;
+  }
+  .mainPageNormalText {
+    height: 60px;
+    width: 573px;
+    font-family: "League Spartan";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .bookTableButton {
+    height: 64px;
+    width: 245px;
+    margin: 0px auto;
+  }
+
+  .mainPageSecondPartContentBox {
+    height: 675px;
+    width: 573px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px auto;
+    gap: 0px;
+  }
+  .villageImage {
+    display: none;
+  }
+  .villagephototablet {
+    height: 360px;
+    width: 573px;
+    background-image: url(../icons/villagepohototablet.svg);
+    background-position: center 0%;
+
+    background-repeat: no-repeat;
+    background-size: auto auto;
+  }
+  .seoncPartContentBox {
+    height: 259px;
+    width: 457px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin: 0px auto;
+  }
+  .secondPartLine {
+    margin: 30px auto;
+  }
+  .seoncPAartHeaderText {
+    height: 96px;
+    width: 457px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    text-align: center;
+  }
+  .secondPartSecondaryText {
+    height: 90px;
+    width: 457px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  .mainPageThirdPartContentBox {
+    height: 675px;
+    width: 573px;
+    margin: 100px auto !important;
+  }
+  .dinningImage {
+    display: none;
+  }
+  .dinningImageTablet {
+    height: 360px;
+    width: 573px;
+
+    background-image: url(../icons/diningimagetablet.svg);
+    background-position: center 0%;
+
+    background-repeat: no-repeat;
+    background-size: auto auto;
+  }
+  .thirdPartContentBox {
+    height: 213px;
+    width: 457px;
+  }
+  .thirdPAartHeaderText {
+    height: 96px;
+    width: 457px;
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    text-align: center;
+  }
+  .thirdPartSecondaryText {
+    height: 90px;
+    width: 457px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .thirdPartOfMainPage {
+    display: flex;
+    flex-direction: column;
+    height: 891px;
+    width: 768px;
+  }
+  .thirdPartContentBox2 {
+    margin: 0px auto;
+    height: 100%;
+    width: 445px;
+    flex-direction: column;
+  }
+
+  .thirdPartLine {
+    height: 1px;
+    width: 56px;
+    background: #9e7f66;
+  }
+  .thirdPartHeaderTextualBox {
+    height: 259px;
+    width: 445px;
+    margin: 96px 0px;
+  }
+
+  .thirdPartFoodList {
+    height: 386px;
+    width: 573px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px;
+  }
+  .foodInfoBox {
+    flex-direction: row;
+    margin-left: -115px;
+    gap: 10px;
+  }
+  .foodPhoto {
+    height: 96px;
+    width: 128px;
+  }
+  .foodContent {
+    height: 82px;
+    width: 383px;
+    margin: 0px 0px;
+    gap: 10px;
+  }
+  .foodTitle {
+    text-align: left;
+    margin: 0px 0px;
+  }
+  .foodDescription {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .fourthPartSelectTypeCont {
+    height: 781px;
+    width: 689px;
+  }
+  .gatheringImage {
+    display: none;
+  }
+  .gatheringImagetablet {
+  }
+  .selectCategory {
+    height: 36px;
+    width: 689px;
+    flex-direction: row;
+  }
+
+  .categoryDescriptionContentBox {
+    height: 281px;
+    width: 457px;
+    margin: 70px auto;
+  }
+  .categoryDecriptionHeader {
+    height: 48px;
+    width: 457px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .categoryDescriptionNormalText {
+    height: 90px;
+    width: 457px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .bookaTableFirstBox {
+    height: 64px;
+    width: 245px;
+    margin: -50px auto;
+  }
+  .readyToMakeReserContentBox {
+    height: 136px;
+    width: 615px;
+    margin: 70px auto;
+    gap: 10px;
+  }
+  .readyToMakeReservationText {
+    height: 48px;
+    width: 615px;
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    text-align: left;
+  }
+  .bookTableSecondBox {
+    height: 64px;
+    width: 245px;
+  }
 }

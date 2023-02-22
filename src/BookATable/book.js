@@ -76,10 +76,10 @@ const Book = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // if (!name || !email || !month || !day || !year || !hour || !minute) {
-    //   alert("Please fill in all the required fields.");
-    //   return;
-    // }
+    if (!name || !email || !month || !day || !year || !hour || !minute) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
 
     let formData = {
       name,

@@ -8,7 +8,8 @@ import summerfruit from "../icons/summerfruit.svg";
 import gathering from "../icons/gathering.svg";
 import Bottom from "../Bottom/Bottom";
 import { Link } from "react-router-dom";
-
+import villagepohototablet from "../icons/villagepohototablet.svg";
+import gatheringImagetablet from "../icons/gatheringImagetablet.svg";
 const Main = () => {
   return (
     <>
@@ -30,6 +31,7 @@ const Main = () => {
 
         <div className="mainPageSecondPartContentBox">
           <img className="villageImage" />
+          <img className="villagephototablet" />
           <div className="seoncPartContentBox">
             <div className="secondPartLine"></div>
             <h2 className="seoncPAartHeaderText">
@@ -42,9 +44,9 @@ const Main = () => {
             </a>
           </div>
         </div>
-
         <div className="mainPageThirdPartContentBox">
           <img className="dinningImage" />
+          <img className="dinningImageTablet" />
           <div className="thirdPartContentBox">
             <div className="thirdPartLine"></div>
             <h2 className="thirdPAartHeaderText">
@@ -58,7 +60,7 @@ const Main = () => {
           </div>
         </div>
         <div className="thirdPartOfMainPage">
-          <div className="thirdPartContentBox">
+          <div className="thirdPartContentBox2">
             <div className="thirdPartContentHeader">
               <div className="thirdPartLine"></div>
               <div className="thirdPartHeaderTextualBox">
@@ -73,7 +75,7 @@ const Main = () => {
               </div>
               <div className="thirdPartFoodList">
                 <div className="foodInfoBox">
-                  <img src={salmonimage} />
+                  <img className="foodPhoto" src={salmonimage} />
                   <div className="foodContent">
                     <h2 className="foodTitle">Seared Salmon Fillet</h2>
                     <a className="foodDescription">
@@ -83,7 +85,7 @@ const Main = () => {
                   </div>
                 </div>
                 <div className="foodInfoBox">
-                  <img src={rosemary} />
+                  <img className="foodPhoto" src={rosemary} />
                   <div className="foodContent">
                     <h2 className="foodTitle">Rosemary Filet Mignon</h2>
                     <a className="foodDescription">
@@ -93,7 +95,7 @@ const Main = () => {
                   </div>
                 </div>
                 <div className="foodInfoBox">
-                  <img src={summerfruit} />
+                  <img className="foodPhoto" src={summerfruit} />
                   <div className="foodContent">
                     <h2 className="foodTitle">Summer Fruit Chocolate Mousse</h2>
                     <a className="foodDescription">
@@ -108,6 +110,8 @@ const Main = () => {
         </div>
         <div className="fourthPartSelectTypeCont">
           <img src={gathering} className="gatheringImage" />
+          <img src={gatheringImagetablet} className="gatheringImagetablet" />
+
           <div className="selectCategory">
             <a className="categoryText">FAMILY GATHERING</a>
             <a className="categoryText">SPECIAL EVENTS</a>
