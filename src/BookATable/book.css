@@ -1,5 +1,5 @@
 .bookMainCont {
-  height: 1150px;
+  height: 900px;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
   line-height: 16px;
   letter-spacing: 2.5px;
   text-align: left;
-  color: #ffffff;
+  color: #111111;
 }
 .reservationHeaderSecondText {
   height: 40px;
@@ -47,7 +47,7 @@
   letter-spacing: -0.4000000059604645px;
   text-align: center;
 
-  color: #ffffff;
+  color: #111111;
 }
 .reservationNormalText {
   height: 40px;
@@ -58,7 +58,7 @@
   line-height: 26px;
   letter-spacing: 0px;
   text-align: center;
-  color: #ffffff;
+  color: #111111;
 }
 .goToMain {
   display: flex;
@@ -66,7 +66,7 @@
   justify-content: space-around;
   height: 64px;
   width: 263px;
-  border: 1px solid #ffffff;
+  border: 1px solid black;
   background: none;
   font-family: "League Spartan";
   font-size: 17px;
@@ -74,7 +74,7 @@
   line-height: 28px;
   letter-spacing: 2.5px;
   text-align: center;
-  color: #ffffff;
+  color: #111111;
   text-decoration: none;
 }
 .goToMain:hover {
@@ -363,7 +363,7 @@
     width: 768px;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-image: url(../icons/bookback.svg);
+    background-image: url(../icons/khachapuri.jpg);
   }
   .reservationHeaderText {
     margin-left: -1050px !important;
