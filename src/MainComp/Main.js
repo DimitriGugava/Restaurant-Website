@@ -10,7 +10,31 @@ import Bottom from "../Bottom/Bottom";
 import { Link } from "react-router-dom";
 import villagepohototablet from "../icons/villagepohototablet.svg";
 import gatheringImagetablet from "../icons/gatheringImagetablet.svg";
+import gatheringdesktop from "../icons/gatheringdesktop.svg";
+import socialevents from "../icons/socialevents.svg";
+import specialevents from "../icons/specialevents.svg";
+import { useState } from "react";
 const Main = () => {
+  const [familyGathering, setFamilyGathering] = useState(true);
+  const [specialEvents, setSpecialEvents] = useState(false);
+  const [socialEvents, setSocialEvents] = useState(false);
+
+  const changeFamilyGathering = () => {
+    setFamilyGathering(true);
+    setSpecialEvents(false);
+    setSocialEvents(false);
+  };
+  const changeSpecialEvents = () => {
+    setFamilyGathering(false);
+    setSpecialEvents(true);
+    setSocialEvents(false);
+  };
+  const changeSocialEvents = () => {
+    setFamilyGathering(false);
+    setSpecialEvents(false);
+    setSocialEvents(true);
+  };
+
   return (
     <>
       <div className="mainpage">
@@ -108,27 +132,96 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="fourthPartSelectTypeCont">
-          <img src={gathering} className="gatheringImage" />
-          <img src={gatheringImagetablet} className="gatheringImagetablet" />
+        {familyGathering && (
+          <div className="fourthPartSelectTypeCont">
+            <img src={gathering} className="gatheringImage" />
+            <img src={gatheringImagetablet} className="gatheringImagetablet" />
+            <img src={gatheringdesktop} className="gatheringdesktop" />
 
-          <div className="selectCategory">
-            <a className="categoryText">FAMILY GATHERING</a>
-            <a className="categoryText">SPECIAL EVENTS</a>
-            <a className="categoryText">SOCIAL EVENTS</a>
+            <div className="selectCategory">
+              <a className="categoryText" onClick={changeFamilyGathering}>
+                FAMILY GATHERING
+              </a>
+              <a className="categoryText" onClick={changeSpecialEvents}>
+                SPECIAL EVENTS
+              </a>
+              <a className="categoryText" onClick={changeSocialEvents}>
+                SOCIAL EVENTS
+              </a>
+            </div>
+            <div className="categoryDescriptionContentBox">
+              <a className="categoryDecriptionHeader">Family Gathering</a>
+              <a className="categoryDescriptionNormalText">
+                We love catering for entire families. So please bring everyone
+                along for a special meal with your loved ones. We’ll provide a
+                memorable experience for all.
+              </a>
+            </div>
+            <Link to="/reservation" className="bookaTableFirstBox">
+              BOOK A TABLE
+            </Link>
           </div>
-          <div className="categoryDescriptionContentBox">
-            <a className="categoryDecriptionHeader">Family Gathering</a>
-            <a className="categoryDescriptionNormalText">
-              We love catering for entire families. So please bring everyone
-              along for a special meal with your loved ones. We’ll provide a
-              memorable experience for all.
-            </a>
+        )}
+        {specialEvents && (
+          <div className="fourthPartSelectTypeCont">
+            <img src={gathering} className="gatheringImage" />
+            <img src={gatheringImagetablet} className="gatheringImagetablet" />
+            <img src={specialevents} className="gatheringdesktop" />
+
+            <div className="selectCategory">
+              <a className="categoryText" onClick={changeSocialEvents}>
+                FAMILY GATHERING
+              </a>
+              <a className="categoryText" onClick={changeSocialEvents}>
+                SPECIAL EVENTS
+              </a>
+              <a className="categoryText" onClick={changeSocialEvents}>
+                SOCIAL EVENTS
+              </a>
+            </div>
+            <div className="categoryDescriptionContentBox">
+              <a className="categoryDecriptionHeader">Special Events</a>
+              <a className="categoryDescriptionNormalText">
+                Whether it’s a romantic dinner or special date you’re
+                celebrating with others we’ll look after you. We’ll be sure to
+                mark your special date with an unforgettable meal.
+              </a>
+            </div>
+            <Link to="/reservation" className="bookaTableFirstBox">
+              BOOK A TABLE
+            </Link>
           </div>
-          <Link to="/reservation" className="bookaTableFirstBox">
-            BOOK A TABLE
-          </Link>
-        </div>
+        )}
+        {socialEvents && (
+          <div className="fourthPartSelectTypeCont">
+            <img src={socialevents} className="gatheringImage" />
+            <img src={socialevents} className="gatheringImagetablet" />
+            <img src={socialevents} className="gatheringdesktop" />
+
+            <div className="selectCategory">
+              <a className="categoryText" onClick={changeFamilyGathering}>
+                FAMILY GATHERING
+              </a>
+              <a className="categoryText" onClick={changeSpecialEvents}>
+                SPECIAL EVENTS
+              </a>
+              <a className="categoryText" onClick={changeSocialEvents}>
+                SOCIAL EVENTS
+              </a>
+            </div>
+            <div className="categoryDescriptionContentBox">
+              <a className="categoryDecriptionHeader">Social Events</a>
+              <a className="categoryDescriptionNormalText">
+                Are you looking to have a larger social event? No problem! We’re
+                more than happy to cater for big parties. We’ll work with you to
+                make your event a hit with everyone.
+              </a>
+            </div>
+            <Link to="/reservation" className="bookaTableFirstBox">
+              BOOK A TABLE
+            </Link>
+          </div>
+        )}
         <div className="fifthPartReadyForReserCont">
           <div className="readyToMakeReserContentBox">
             <a className="readyToMakeReservationText">
