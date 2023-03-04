@@ -4,6 +4,10 @@ This project is a React.JS web application for a restaurant. It features Reserva
 
 # live link : https://restaurant-website-ashen.vercel.app/
 
+
+![React-App](https://user-images.githubusercontent.com/107649216/222882574-b29e83db-dabd-4680-b013-ed566f85d4fb.png)
+
+
 ## Installation
 
 To use this application, first clone the repository to your local machine. Then, in the project directory, run:
